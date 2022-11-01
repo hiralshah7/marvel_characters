@@ -1,5 +1,6 @@
 //components always get imported here
 import HeroThumb from './components/TheHeroThumbnail.js';
+import LightBox from './components/ThelightboxComponent.js';
 
 
 (() => {
@@ -21,13 +22,23 @@ import HeroThumb from './components/TheHeroThumbnail.js';
 
         data() {
             return {
-                heroData: {}
+                heroData: {},
+                lightboxData: {}
             }
+        },
+
+        methods: {
+            loadLightBox(item) {
+                debugger;
+                this.lightboxData = item;
+            }
+
         },
 
         components: {
             // call this custom component whatever you want
-            herothumbnail: HeroThumb
+            herothumbnail: HeroThumb,
+            Lightbox: LightBox
         }
     }).mount('#app')
 })()

@@ -20,6 +20,12 @@
     </header>
 
     <main id="app">
+
+        <!-- lightbox component goes here -->
+        <Lightbox>
+        </Lightbox>
+
+        <!-- end lightbox component -->
         <nav id="character-nav">
             <ul class="characters">
                 <!-- prof thumb component goes here -->
@@ -28,7 +34,7 @@
 
 
                 <!-- passing the data object into the component using the :hero props binding -->
-                <herothumbnail v-for="hero in heroData" :hero="hero"></herothumbnail>
+                <herothumbnail @loadlb="loadLightBox" v-for="hero in heroData" :hero="hero"></herothumbnail>
             </ul>
         </nav>
 
@@ -42,9 +48,6 @@
         <h3>All Images &copy; Marvel</h3>
     </footer>
 
-    <!-- lightbox component goes here -->
-
-    <!-- end lightbox component -->
 
     <!-- load script tags at the bottom -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
