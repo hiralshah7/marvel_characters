@@ -7,11 +7,11 @@ export default {
     template:
 
         `
-    <li>
-            <!-- <img class="sprite" src="" alt="hero image"> -->
+    <li>    
+            <img :src='"images/" + hero.biopic' alt="hero image" width="150">
             <div class="sprite"></div>
             <div class="red-bumper"></div>
-            <h5>name</h5>
+            <h5>{{hero.name}}</h5>
     </li>
 `
 }
