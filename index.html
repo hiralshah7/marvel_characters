@@ -23,7 +23,12 @@
         <nav id="character-nav">
             <ul class="characters">
                 <!-- prof thumb component goes here -->
+                <!-- will take the hero component from main.js to use it as component here-->
+                <!-- herothumbnail is in component then in main.js as component and then gave the same tag as of component -->
 
+
+                <!-- passing the data object into the component using the :hero props binding -->
+                <herothumbnail v-for="hero in heroData" :hero="hero"></herothumbnail>
             </ul>
         </nav>
 

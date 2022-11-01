@@ -1,5 +1,5 @@
 export default {
-    name: 'TheHeroThumb',
+    name: 'HeroThumb', // you can name it whatever and import it same name in main.js
 
     props: {
         hero: Object

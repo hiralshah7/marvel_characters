@@ -1,3 +1,7 @@
+//components always get imported here
+import HeroThumb from './components/TheHeroThumbnail.js';
+
+
 (() => {
     // create vue instance here
     const { createApp } = Vue
@@ -19,6 +23,11 @@
             return {
                 heroData: {}
             }
+        },
+
+        components: {
+            // call this custom component whatever you want
+            herothumbnail: HeroThumb
         }
     }).mount('#app')
 })()
