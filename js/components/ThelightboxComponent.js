@@ -3,7 +3,10 @@ export default {
     props: ['hero'],
     template: `
     <section class="lightbox">
-    <img src="images/closeIcon.png" class="lightbox_close">
+    <!-- validate data goes here -->
+    <!--<pre>{{ hero }}</pre>-->
+    <!-- remove when working -->    
+    <img @click="closeLB" src="images/closeIcon.png" class="lightbox_close">
     <!-- hero image on the left, text on the right -->
     <!-- her image is a background image -->
     <article>
@@ -19,7 +22,8 @@ export default {
     `,
     methods: {
         closeLB() {
-            debugger;
+            // debugger;
+            this.$emit('closelb');
         }
     }
 }

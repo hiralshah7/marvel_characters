@@ -23,14 +23,17 @@ import LightBox from './components/ThelightboxComponent.js';
         data() {
             return {
                 heroData: {},
-                lightboxData: {}
+                lightboxData: {},
+                // we can use the key we want to 
+                showLightBox: false
             }
         },
 
         methods: {
             loadLightBox(item) {
-                debugger;
+                // debugger;
                 this.lightboxData = item;
+                this.showLightBox = true;
             }
 
         },

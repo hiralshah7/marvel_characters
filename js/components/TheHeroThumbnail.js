@@ -11,13 +11,14 @@ export default {
         `
     <li @click="loadLightboxData">    
             <img :src='"images/" + hero.biopic' alt="hero image" width="150">
-            <!--<div class="sprite"></div>--!>
+            <!--<div class="sprite"></div>-->
             <div class="red-bumper"></div>
             <h5>{{hero.name}}</h5>
     </li>
         `,
     methods: {
         loadLightboxData() {
+            // pass the indvidual hero object back to thhe main vw instance 
             this.$emit('loadlb', this.hero);
         }
     }

@@ -22,7 +22,7 @@
     <main id="app">
 
         <!-- lightbox component goes here -->
-        <Lightbox>
+        <Lightbox @closelb="this.showLightBox = false" v-if="showLightBox" :hero=" lightboxData">
         </Lightbox>
 
         <!-- end lightbox component -->
